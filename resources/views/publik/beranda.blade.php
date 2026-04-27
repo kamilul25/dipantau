@@ -114,30 +114,52 @@
     </div>
 </div>
 
-{{-- ================= DESKRIPSI INSTANSI ================= --}}
-<div class="container my-5">
-    <div class="card border-0 shadow-sm">
-        <div class="card-body p-4">
-            <h5 class="fw-bold mb-3 text-primary">
-                <i class="fa-solid fa-building me-2"></i>
-                Tentang Bidang PSU
-            </h5>
-            <p class="text-muted mb-0" style="text-align: justify;">
+<!-- ================= INFORMASI ================= -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('images/krb.png') }}" height="350">
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold mb-3 text-success">Tentang Bidang PSU</h3>
+                <p class="text-muted">
                 Bidang Prasarana, Sarana, dan Utilitas (PSU) pada Dinas Perumahan, 
                 Kawasan Permukiman dan Pertanahan Kabupaten Tapin memiliki peran 
                 penting dalam pengelolaan dan pengawasan prasarana, sarana, serta 
                 utilitas umum di Kabupaten Tapin. 
-                <br><br>
+                </p>
+                <p class="text-muted">
                 Bidang ini bertanggung jawab dalam memastikan ketersediaan dan 
                 kualitas infrastruktur pendukung seperti jalan lingkungan, 
                 penerangan jalan umum (PJU), serta fasilitas umum lainnya agar sesuai 
                 dengan standar yang telah ditetapkan.
-                <br><br>
+                </p>
+                <p class="text-muted">
                 Selain itu, Bidang PSU juga menangani proses serah terima prasarana, 
                 sarana, dan utilitas dari pengembang kepada pemerintah daerah guna 
                 menjamin keberlanjutan pemeliharaan dan pelayanan kepada masyarakat.
-            </p>
+                </p>                
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- ================= PETA LOKASI ================= -->
+<section id="peta" class="section bg-light">
+    <div class="container">
+        <div class="section-title section-divider">
+            <h2>Lokasi Disperkimtan Kab. Tapin</h2>
+            <p>Lokasi Dinas Perumahan, Kawasan Permukiman dan Pertanahan Kabupaten Tapin</p>
+        </div>
+
+        <div class="map-wrapper">
+            <iframe
+                src="https://www.google.com/maps?q=-2.92796,115.16989&z=17&t=k&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
 @endsection

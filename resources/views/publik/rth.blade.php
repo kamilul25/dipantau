@@ -87,7 +87,7 @@
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <i class="fa-solid fa-people-group fa-6x text-secondary opacity-75"></i>
+                <img src="{{ asset('images/krb.png') }}" height="350">
             </div>
         </div>
     </div>
