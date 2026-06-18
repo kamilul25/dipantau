@@ -4,7 +4,6 @@
         {{-- Logo --}}
         <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="{{ url('/') }}">
             <img src="{{ asset('images/dinas.png') }}" alt="Logo Kabupaten" height="43">
-            <img src="{{ asset('images/psu.png') }}" alt="Logo PSU" height="43">
             <span>DIPANTAU</span>
         </a>
 

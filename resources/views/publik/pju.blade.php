@@ -181,7 +181,7 @@ $(document).ready(function(){
         var kecamatan_id = $(this).val();
         var target = $(this).attr('id') == 'kecamatan' ? '#desa' : '#filter_desa';
         if(kecamatan_id){
-            $.post('{{ route("getdesa") }}', { kecamatan_id: kecamatan_id, _token:'{{ csrf_token() }}'}, function(data){
+            $.post('{{ route("pju.getDesa") }}', { kecamatan_id: kecamatan_id, _token:'{{ csrf_token() }}'}, function(data){
                 $(target).html(data);
             });
         } else { $(target).html('<option value="">== Pilih Desa ==</option>'); }
