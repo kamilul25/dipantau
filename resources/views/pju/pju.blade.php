@@ -256,7 +256,7 @@ $('#kecamatan, #filter_kecamatan').change(function(){
     });
 
     // MODAL GPX INTERAKTIF DENGAN SWITCH LAYER
-$('.btn-map').click(function(){
+$(document).on('click', '.btn-map', function () {
 
     var id = $(this).data('id');
     var nama = $(this).data('nama');
