@@ -87,7 +87,9 @@
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('images/krb.png') }}" class="krb-img" alt="Tentang PSU">
+                <img src="{{ asset('images/krb.png') }}"
+                    class="img-fluid krb-img"
+                    alt="Tentang Bidang PSU">
             </div>
         </div>
     </div>
