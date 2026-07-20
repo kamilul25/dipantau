@@ -131,6 +131,7 @@ Swal.fire({
 <div class="container">
     <div class="card">
         <div class="card-body">
+        <div class="table-responsive">
             <table id="tabelPJU" class="table table-striped table-hover align-middle">
                 <thead class="table-light">
                     <tr>
@@ -185,6 +186,7 @@ Swal.fire({
                     @endforeach
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
 </div>

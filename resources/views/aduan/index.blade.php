@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="container">
     <div class="card">
         <div class="card-body">
+        <div class="table-responsive">
             <table id="tabelAduan" class="table table-striped table-hover align-middle">
                 <thead class="table-light">
                     <tr>
@@ -201,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     @endforeach
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
 </div>

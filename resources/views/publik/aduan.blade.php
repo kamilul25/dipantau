@@ -89,7 +89,7 @@
 <div class="container">
 <div class="card">
 <div class="card-body">
-
+<div class="table-responsive">
 <table id="tabelAduan" class="table table-striped table-hover align-middle">
 <thead class="table-light">
 <tr>
@@ -121,7 +121,7 @@
 @endforeach
 </tbody>
 </table>
-
+</div>
 </div>
 </div>
 </div>
