@@ -119,7 +119,7 @@
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('images/krb.png') }}" height="350">
+                <img src="{{ asset('images/krb.png') }}" class="krb-img" alt="Tentang PSU">
             </div>
             <div class="col-md-6">
                 <h3 class="fw-bold mb-3 text-success">Tentang Bidang PSU</h3>

@@ -499,3 +499,9 @@ body {
     background-color: #dc3545; /* merah */
     border-color: #dc3545;
 }
+
+.krb-img{
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+}
