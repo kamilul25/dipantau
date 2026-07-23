@@ -112,7 +112,7 @@
                         <li><a class="dropdown-item" href="{{ asset('file/PP_No_64_Tahun_2016.pdf')}}" target="_blank">PP No. 64 Tahun 2016</a></li>
                         <li><a class="dropdown-item" href="{{ asset('file/PP_No_12_Tahun_2021.pdf')}}" target="_blank">PP No. 12 Tahun 2021</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ asset('file/Permendagri_No_09_Tahun_2009.pdf')}}" target="_blank">Permendagri No. 9 Tahun 2009</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('file/Permendagri_No_15_Tahun_2026.pdf')}}" target="_blank">Permendagri No. 15 Tahun 2026</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ asset('file/Perda_No_7_Tahun_2015.pdf')}}" target="_blank">Perda No. 7 Tahun 2015</a></li>
                         <li><hr class="dropdown-divider"></li>
