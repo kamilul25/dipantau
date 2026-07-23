@@ -129,6 +129,12 @@ Route::get('/pju-publik/viewGpx/{id}', [PublikController::class, 'viewGpx'])->na
 
 Route::get('/map-all', [PublikController::class, 'mapAll'])->name('publik.mapAll');
 Route::get('/gpx-all', [PublikController::class, 'getAllGpx'])->name('publik.getAllGpx');
+Route::get('/publik/jumlah-kecamatan', [PublikController::class,'jumlahPerKecamatan'])
+    ->name('publik.jumlahKecamatan');
+Route::get('/publik/jumlah-desa', [PublikController::class,'jumlahPerDesa'])
+    ->name('publik.jumlahDesa');
+Route::post('/publik/marker-desa', [PublikController::class,'getMarkerDesa'])
+    ->name('publik.markerDesa');
 
 // Data Aduan Publik
 Route::get('/aduan-publik', [PublikController::class, 'aduan'])->name('publik.aduan');

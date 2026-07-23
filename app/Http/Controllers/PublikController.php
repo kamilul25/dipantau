@@ -194,4 +194,78 @@ public function getAllGpx()
 
     return response()->json($data);
 }
+
+public function jumlahPerKecamatan()
+{
+    $data = Pju::selectRaw("
+                kecamatan,
+                SUM(COALESCE(pju,0) + COALESCE(pjuts,0)) as jumlah
+            ")
+            ->groupBy('kecamatan')
+            ->get();
+
+    return response()->json($data);
+}
+
+public function jumlahPerDesa()
+{
+    $data = Pju::selectRaw("
+                desa,
+                SUM(COALESCE(pju,0) + COALESCE(pjuts,0)) as jumlah
+            ")
+            ->groupBy('desa')
+            ->get();
+
+    return response()->json($data);
+}
+
+
+public function getMarkerDesa(Request $request)
+{
+    $desa = $request->desa;
+
+    $pjus = Pju::where('desa',$desa)
+                ->whereNotNull('file_gpx')
+                ->get();
+
+    $data = [];
+
+    foreach($pjus as $pju){
+
+        $path = storage_path('app/public/gpx/'.$pju->file_gpx);
+
+        if(!file_exists($path)){
+            continue;
+        }
+
+        $xml = simplexml_load_file($path);
+
+        foreach($xml->wpt as $point){
+
+            $data[]=[
+
+                'lat'=>(float)$point['lat'],
+
+                'lng'=>(float)$point['lon'],
+
+                'nama'=>"RT ".$pju->rt." RW ".$pju->rw,
+
+                'rt'=>$pju->rt,
+
+                'rw'=>$pju->rw,
+
+                'pju'=>$pju->pju,
+
+                'pjuts'=>$pju->pjuts,
+
+                'tahun'=>$pju->tahun
+
+            ];
+
+        }
+
+    }
+
+    return response()->json($data);
+}
 }

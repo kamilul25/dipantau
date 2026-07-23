@@ -512,3 +512,51 @@ body {
         max-height: 220px;
     }
 }
+
+/* Tooltip Kecamatan & Desa */
+.info-tooltip{
+    background:#fff;
+    border:1px solid #d0d0d0;
+    border-radius:8px;
+    padding:6px 10px;
+    font-size:13px;
+    font-weight:600;
+    color:#333;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+/* Hilangkan panah bawaan tooltip */
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before{
+    display:none;
+}
+
+/* Animasi polygon */
+.leaflet-interactive{
+    transition:all .35s ease;
+}
+
+.leaflet-interactive{
+    transition:
+        fill-opacity .35s ease,
+        opacity .35s ease,
+        stroke-width .35s ease;
+}
+
+.fade-in{
+    animation: fadePolygon .35s ease;
+}
+
+@keyframes fadePolygon{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
