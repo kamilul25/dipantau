@@ -126,6 +126,7 @@ var jumlahDesa = {};
 var desaGeojson = null;
 var desaLayer = null;
 var selectedKecamatan = null;
+var selectedDesa = null;
 
 /* ===========================
    STYLE GIS
@@ -181,10 +182,10 @@ const STYLE = {
         },
 
         selected:{
-            color:"#146c43",
-            weight:2,
-            fillColor:"#63c174",
-            fillOpacity:0.75
+            color:"#ffffff",
+            weight:3,
+            fillColor:"#ffffff",
+            fillOpacity:0
         }
 
     }
@@ -329,6 +330,10 @@ function highlightFeature(e){
 
 function highlightDesa(e){
 
+    if(selectedDesa === e.target){
+        return;
+    }
+
     e.target.setStyle(STYLE.desa.hover);
 
 }
@@ -345,7 +350,15 @@ function resetHighlight(e){
 
 function resetDesa(e){
 
-    e.target.setStyle(STYLE.desa.normal);
+    if(selectedDesa === e.target){
+
+        e.target.setStyle(STYLE.desa.selected);
+
+    }else{
+
+        e.target.setStyle(STYLE.desa.normal);
+
+    }
 
 }
 
@@ -415,14 +428,22 @@ function pilihKecamatan(id){
 function pilihDesa(id){
 
     if(!desaLayer){
-
         return;
-
     }
 
     desaLayer.eachLayer(function(layer){
 
         if(parseInt(layer.feature.properties.kd_kelurahan)===parseInt(id)){
+
+            selectedDesa = layer;
+
+            desaLayer.eachLayer(function(l){
+
+                l.setStyle(STYLE.desa.normal);
+
+            });
+
+            layer.setStyle(STYLE.desa.selected);
 
             map.fitBounds(layer.getBounds(),{
 
@@ -648,6 +669,7 @@ function kembaliKeKecamatan(){
 
     }
 
+    selectedDesa = null;
     selectedKecamatan = null;
 
     kecamatanLayer.eachLayer(function(layer){
