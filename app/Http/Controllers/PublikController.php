@@ -77,7 +77,7 @@ public function beranda()
     });
 
     // ===== SLIDES =====
-    $slides = Slide::orderBy('order','asc')->take(5)->get();
+    $slides = Slide::orderBy('order','asc')->take(8)->get();
 
     return view('publik.beranda', compact(
         'slides',

@@ -16,8 +16,8 @@ class SlideController extends Controller
 
     public function store(Request $request)
     {
-        if (Slide::count() >= 4) {
-            return back()->with('error', 'Maksimal hanya 4 slide!');
+        if (Slide::count() >= 8) {
+            return back()->with('error', 'Maksimal hanya 8 slide!');
         }
 
         $request->validate([

@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="container mt-4">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            Kelola Slide (Maksimal 4)
+            Kelola Slide (Maksimal 8)
         </div>
     <div class="card-body">
 
     {{-- FORM TAMBAH SLIDE --}}
-    @if($slides->count() < 4)
+    @if($slides->count() < 8)
     <form action="{{ route('slides.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-2">
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </form>
     @else
         <div class="alert alert-warning">
-            Maksimal 4 slide sudah tercapai. Hapus salah satu untuk menambah.
+            Maksimal 8 slide sudah tercapai. Hapus salah satu untuk menambah.
         </div>
     @endif
     </div>
