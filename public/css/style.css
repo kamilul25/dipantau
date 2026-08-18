@@ -560,3 +560,272 @@ body {
     }
 
 }
+
+/* =====================================================
+   GOOEY DASHBOARD CARD
+   KHUSUS .gooey-card
+   Tidak mempengaruhi .card lainnya
+===================================================== */
+
+.gooey-card {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate;
+
+    border: 0 !important;
+    border-radius: 22px !important;
+
+    background: #ffffff !important;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease !important;
+}
+
+
+/* Hover card */
+.gooey-card:hover {
+    transform: translateY(-7px) !important;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18) !important;
+}
+
+
+/* =====================================================
+   LINGKARAN UTAMA
+===================================================== */
+
+.gooey-card .gooey-bg {
+    position: absolute !important;
+
+    width: 110px !important;
+    height: 110px !important;
+
+    right: -45px !important;
+    bottom: -45px !important;
+
+    display: block !important;
+
+    border-radius: 50% !important;
+
+    background: var(--gooey-color) !important;
+
+    opacity: 0.35 !important;
+
+    z-index: 0 !important;
+
+    pointer-events: none !important;
+
+    transform: translateZ(0);
+
+    transition:
+        width 0.65s cubic-bezier(.4, 0, .2, 1),
+        height 0.65s cubic-bezier(.4, 0, .2, 1),
+        right 0.65s cubic-bezier(.4, 0, .2, 1),
+        bottom 0.65s cubic-bezier(.4, 0, .2, 1),
+        opacity 0.35s ease !important;
+}
+
+
+/* =====================================================
+   LINGKARAN KECIL KEDUA
+===================================================== */
+
+.gooey-card::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 55px !important;
+    height: 55px !important;
+
+    left: -20px !important;
+    top: -20px !important;
+
+    border-radius: 50% !important;
+
+    background: var(--gooey-color) !important;
+
+    opacity: 0.15 !important;
+
+    z-index: 0 !important;
+
+    pointer-events: none;
+
+    transition:
+        width 0.6s ease,
+        height 0.6s ease,
+        transform 0.6s ease,
+        opacity 0.4s ease !important;
+}
+
+
+/* =====================================================
+   CONTENT CARD
+===================================================== */
+
+.gooey-card .card-body {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    padding: 30px 20px !important;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.gooey-card .icon-box {
+    position: relative !important;
+
+    z-index: 3 !important;
+
+    width: 70px;
+    height: 70px;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: var(--gooey-color) !important;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease !important;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.gooey-card .card-title-gooey,
+.gooey-card .card-number-gooey {
+    position: relative !important;
+
+    z-index: 3 !important;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease !important;
+}
+
+
+/* =====================================================
+   WARNA
+===================================================== */
+
+.gooey-card.gooey-warning {
+    --gooey-color: #ffc107;
+}
+
+.gooey-card.gooey-success {
+    --gooey-color: #198754;
+}
+
+.gooey-card.gooey-danger {
+    --gooey-color: #dc3545;
+}
+
+.gooey-card.gooey-primary {
+    --gooey-color: #0d6efd;
+}
+
+
+/* =====================================================
+   HOVER - LINGKARAN MEMENUHI CARD
+===================================================== */
+
+.gooey-card:hover .gooey-bg {
+    width: 600px !important;
+    height: 600px !important;
+
+    right: -200px !important;
+    bottom: -200px !important;
+
+    opacity: 1 !important;
+}
+
+
+/* Lingkaran kedua ikut bergerak */
+.gooey-card:hover::before {
+    width: 180px !important;
+    height: 180px !important;
+
+    transform: translate(30px, 30px);
+
+    opacity: 0.25 !important;
+}
+
+
+/* =====================================================
+   HOVER ICON
+===================================================== */
+
+.gooey-card:hover .icon-box {
+    background: rgba(255, 255, 255, 0.20) !important;
+
+    color: #ffffff !important;
+
+    transform:
+        scale(1.08)
+        rotate(-4deg);
+}
+
+
+/* =====================================================
+   HOVER TEXT
+===================================================== */
+
+.gooey-card:hover .card-title-gooey,
+.gooey-card:hover .card-number-gooey {
+    color: #ffffff !important;
+}
+
+
+/* Angka sedikit membesar */
+.gooey-card:hover .card-number-gooey {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .gooey-card .card-body {
+        padding: 25px 15px !important;
+    }
+
+    .gooey-card .gooey-bg {
+        width: 90px !important;
+        height: 90px !important;
+
+        right: -35px !important;
+        bottom: -35px !important;
+    }
+
+    .gooey-card:hover .gooey-bg {
+        width: 450px !important;
+        height: 450px !important;
+
+        right: -150px !important;
+        bottom: -150px !important;
+    }
+}

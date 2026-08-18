@@ -37,80 +37,161 @@
 {{-- ================= DASHBOARD PERUMAHAN ================= --}}
 <div class="container my-4">
     <h5 class="fw-semibold border-bottom pb-2 mb-3">PASUM PERUMAHAN</h5>
+
     <div class="row g-3">
+
+        {{-- JUMLAH PERUMAHAN --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pasum') }}'">
+            <div class="card gooey-card gooey-warning text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pasum') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-warning mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-house"></i>
                     </div>
-                    <h6 class="text-warning fw-bold">JUMLAH PERUMAHAN</h6>
-                    <h2 class="fw-bold">{{ $total_perumahan }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        JUMLAH PERUMAHAN
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $total_perumahan }}
+                    </h2>
                 </div>
             </div>
         </div>
+
+
+        {{-- SUDAH SERAH TERIMA PSU --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pasum') }}'">
+            <div class="card gooey-card gooey-success text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pasum') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-success mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-handshake"></i>
                     </div>
-                    <h6 class="text-success fw-bold">SUDAH SERAH TERIMA PSU</h6>
-                    <h2 class="fw-bold">{{ $sudah_psu }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        SUDAH SERAH TERIMA PSU
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $sudah_psu }}
+                    </h2>
                 </div>
             </div>
         </div>
+
+
+        {{-- BELUM SERAH TERIMA PSU --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pasum') }}'">
+            <div class="card gooey-card gooey-danger text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pasum') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-danger mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-handshake-slash"></i>
                     </div>
-                    <h6 class="text-danger fw-bold">BELUM SERAH TERIMA PSU</h6>
-                    <h2 class="fw-bold">{{ $belum_psu }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        BELUM SERAH TERIMA PSU
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $belum_psu }}
+                    </h2>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
 
 {{-- ================= DASHBOARD PJU & PJUTS ================= --}}
 <div class="container my-4">
     <h5 class="fw-semibold border-bottom pb-2 mb-3">PJU DAN PJUTS</h5>
+
     <div class="row g-3">
+
+        {{-- JUMLAH PJU --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pju') }}'">
+            <div class="card gooey-card gooey-warning text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pju') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-warning mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h6 class="text-warning fw-bold">JUMLAH PJU</h6>
-                    <h2 class="fw-bold">{{ $jumlah_pju }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        JUMLAH PJU
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $jumlah_pju }}
+                    </h2>
                 </div>
             </div>
         </div>
+
+
+        {{-- JUMLAH PJUTS --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pju') }}'">
+            <div class="card gooey-card gooey-success text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pju') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-success mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-solar-panel"></i>
                     </div>
-                    <h6 class="text-success fw-bold">JUMLAH PJUTS</h6>
-                    <h2 class="fw-bold">{{ $jumlah_pjuts }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        JUMLAH PJUTS
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $jumlah_pjuts }}
+                    </h2>
                 </div>
             </div>
         </div>
+
+
+        {{-- TOTAL TITIK --}}
         <div class="col-md-4">
-            <div class="card text-center shadow-sm border-0 h-100" style="cursor:pointer;" onclick="window.location.href='{{ route('publik.pju') }}'">
+            <div class="card gooey-card gooey-primary text-center h-100"
+                 onclick="window.location.href='{{ route('publik.pju') }}'">
+
+                <div class="gooey-bg"></div>
+
                 <div class="card-body">
-                    <div class="icon-box bg-primary mb-3">
+                    <div class="icon-box mb-3">
                         <i class="fa-solid fa-chart-pie"></i>
                     </div>
-                    <h6 class="text-primary fw-bold">TOTAL TITIK</h6>
-                    <h2 class="fw-bold">{{ $total_titik }}</h2>
+
+                    <h6 class="fw-bold card-title-gooey">
+                        TOTAL TITIK
+                    </h6>
+
+                    <h2 class="fw-bold card-number-gooey">
+                        {{ $total_titik }}
+                    </h2>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
