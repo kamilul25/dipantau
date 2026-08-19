@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top
+    {{ request()->routeIs('publik.beranda') ? 'navbar-home' : 'navbar-page' }}"
+    id="mainNavbar">
     <div class="container">
 
         {{-- Logo --}}

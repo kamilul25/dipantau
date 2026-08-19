@@ -136,5 +136,29 @@ document.getElementById('btnLogout').addEventListener('click', function () {
 
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const navbar = document.getElementById('mainNavbar');
+
+    function navbarScroll() {
+
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+    }
+
+    navbarScroll();
+
+    window.addEventListener('scroll', navbarScroll, {
+        passive: true
+    });
+
+});
+</script>
 </body>
 </html>
